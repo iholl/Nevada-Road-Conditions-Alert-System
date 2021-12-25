@@ -33,6 +33,8 @@ jobs:
     - name: Check Road Conditions
       env:
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        EMAIL: ${{ secrets.EMAIL }}
+        PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
       run: |
         python road_conditions_check.py
     - name: Commit and push if it changed
