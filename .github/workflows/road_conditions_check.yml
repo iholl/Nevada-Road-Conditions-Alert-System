@@ -28,8 +28,9 @@ jobs:
         pip install pandas
         pip install python-decouple
         pip install beautifulsoup4
+        pip install lxml
     # run python script to pull and transform arcgis data to csv to heroku postgres server
-    - name: Build database
+    - name: Check Road Conditions
       env:
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
       run: |
