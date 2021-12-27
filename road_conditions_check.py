@@ -67,7 +67,7 @@ def send_email():
     server.sendmail(msg["From"], email_list, msg.as_string())
 
 
-# if all data in compare dataframe is FASLE update data and send email with new conditions
+# if all data in compare dataframe is FALSE update data and send email with new conditions
 if compare_df.all():
     print("No updates to the road conditions")
 else:
